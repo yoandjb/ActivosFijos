@@ -1,0 +1,50 @@
+﻿@model Aplicacion.Models.TipoActivo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoActivo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuentascontablecompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuentascontablecompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuentacontabledepreciacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuentacontabledepreciacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Activo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

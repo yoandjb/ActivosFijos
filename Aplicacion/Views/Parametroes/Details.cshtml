@@ -1,0 +1,50 @@
+﻿@model Aplicacion.Models.Parametro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Parametro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Proceso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Proceso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Depreciacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Depreciacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rnc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rnc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Metodo_Depreciacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Metodo_Depreciacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Parametro }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

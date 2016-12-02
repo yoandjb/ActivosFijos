@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Aplicacion.Models.Parametro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_Proceso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Depreciacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rnc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Metodo_Depreciacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha_Proceso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Depreciacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rnc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Metodo_Depreciacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Parametro }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_Parametro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Parametro })
+        </td>
+    </tr>
+}
+
+</table>
